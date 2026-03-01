@@ -13,7 +13,7 @@ export default function Newsletter() {
         <h1 className="font-serif text-4xl font-bold mb-4">
           The rockland.news Newsletter
         </h1>
-        <p className="text-lg text-text-muted leading-relaxed">
+        <p className="text-lg text-gray leading-relaxed">
           Evidence Briefs, budget breakdowns, development updates, and civic
           analysis — delivered to your inbox weekly. Free. No spam. No partisan
           spin.
@@ -21,9 +21,9 @@ export default function Newsletter() {
       </div>
 
       {/* Placeholder for beehiiv embed */}
-      <div className="border-2 border-dashed border-border rounded-lg p-12 text-center mb-12">
-        <p className="text-text-muted mb-2">Newsletter signup form</p>
-        <p className="text-sm text-text-muted">
+      <div className="border-2 border-dashed border-rule p-12 text-center mb-12">
+        <p className="text-gray mb-2">Newsletter signup form</p>
+        <p className="text-sm text-gray">
           beehiiv embed will go here
         </p>
       </div>
@@ -32,17 +32,17 @@ export default function Newsletter() {
         <h2 className="font-serif text-xl font-bold mb-4 text-center">
           What you&apos;ll get
         </h2>
-        <ul className="space-y-3 text-sm text-text-muted">
+        <ul className="space-y-3 text-sm text-gray">
           <li className="flex gap-3">
-            <span className="text-navy font-bold">Weekly</span>
+            <span className="text-ink font-bold">Weekly</span>
             <span>Evidence Briefs and civic analysis</span>
           </li>
           <li className="flex gap-3">
-            <span className="text-navy font-bold">Monthly</span>
+            <span className="text-ink font-bold">Monthly</span>
             <span>State of the County data report</span>
           </li>
           <li className="flex gap-3">
-            <span className="text-navy font-bold">As needed</span>
+            <span className="text-ink font-bold">As needed</span>
             <span>Breaking budget decisions and development alerts</span>
           </li>
         </ul>

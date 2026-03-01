@@ -12,7 +12,7 @@ export default function Methodology() {
       <h1 className="font-serif text-4xl font-bold mb-8">Methodology</h1>
 
       <div className="prose">
-        <p className="text-lg text-text-muted mb-8">
+        <p className="text-lg text-gray mb-8">
           Transparency about our own process is as important as the transparency
           we demand from government. Here&apos;s exactly how we work.
         </p>
@@ -82,7 +82,7 @@ export default function Methodology() {
         </p>
         <p>
           If you spot an error, please{" "}
-          <a href="/contact" className="text-navy underline">
+          <a href="/contact" className="text-ink underline">
             let us know
           </a>
           . Accuracy matters more than speed.

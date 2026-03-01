@@ -11,11 +11,11 @@ export default function Explainers() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       <div className="mb-12">
-        <span className="text-xs font-mono text-text-muted uppercase tracking-wider">
+        <span className="text-[0.6875rem] font-semibold tracking-[0.1em] uppercase text-red">
           #explainer
         </span>
         <h1 className="font-serif text-4xl font-bold mt-2 mb-4">Explainers</h1>
-        <p className="text-lg text-text-muted leading-relaxed max-w-2xl">
+        <p className="text-lg text-gray leading-relaxed max-w-2xl">
           Government complexity isn&apos;t an accident — it&apos;s a feature that protects
           insiders. These guides strip away the jargon and show you how things
           actually work in Rockland County.
@@ -46,16 +46,16 @@ export default function Explainers() {
         ].map((explainer) => (
           <div
             key={explainer.title}
-            className="border border-border rounded-lg p-6 bg-white"
+            className="border border-rule p-6 bg-paper"
           >
-            <span className="text-xs font-mono text-text-muted">
+            <span className="text-[0.6875rem] font-semibold tracking-[0.1em] uppercase text-red">
               {explainer.tag}
             </span>
             <h3 className="font-serif text-xl font-bold mt-1 mb-2">
               {explainer.title}
             </h3>
-            <p className="text-sm text-text-muted">{explainer.description}</p>
-            <p className="text-xs text-gold mt-3 font-semibold">Coming soon</p>
+            <p className="text-sm text-gray">{explainer.description}</p>
+            <p className="text-xs text-red mt-3 font-semibold">Coming soon</p>
           </div>
         ))}
       </div>
@@ -63,7 +63,7 @@ export default function Explainers() {
       <div className="text-center mt-12">
         <Link
           href="/newsletter"
-          className="inline-block bg-navy text-white text-sm px-6 py-2 rounded hover:bg-navy-light transition-colors"
+          className="inline-block bg-ink text-white text-sm px-6 py-2 hover:bg-ink-light transition-colors"
         >
           Get notified when explainers publish
         </Link>

@@ -71,7 +71,7 @@ export default function About() {
           rockland.news is built by{" "}
           <a
             href="https://currentcreative.ai"
-            className="text-navy underline hover:text-navy-light"
+            className="text-ink underline hover:text-ink-light"
           >
             Current Creative
           </a>
@@ -93,13 +93,13 @@ export default function About() {
       <div className="mt-12 flex gap-4">
         <Link
           href="/methodology"
-          className="text-sm bg-navy text-white px-6 py-2 rounded hover:bg-navy-light transition-colors"
+          className="text-sm bg-ink text-white px-6 py-2 hover:bg-ink-light transition-colors"
         >
           Read Our Methodology
         </Link>
         <Link
           href="/contact"
-          className="text-sm border border-navy text-navy px-6 py-2 rounded hover:bg-cream transition-colors"
+          className="text-sm border border-ink text-ink px-6 py-2 hover:bg-paper-dark transition-colors"
         >
           Get in Touch
         </Link>
