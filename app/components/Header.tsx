@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const navLinks = [
   { href: "/evidence-briefs", label: "Evidence Briefs" },
@@ -14,15 +14,26 @@ const navLinks = [
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 80);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="bg-paper sticky top-0 z-50">
+    <header className={`bg-paper sticky top-0 z-50 transition-shadow duration-300 ${scrolled ? "shadow-sm" : ""}`}>
       {/* Top rule */}
-      <div className="border-t-[3px] border-ink" />
+      <div className="border-t-[3px] border-red" />
 
       <div className="max-w-5xl mx-auto px-4">
-        {/* Masthead */}
-        <div className="py-6 text-center border-b border-rule">
+        {/* Masthead — collapses on scroll */}
+        <div
+          className={`text-center border-b border-rule overflow-hidden transition-all duration-300 ease-in-out ${
+            scrolled ? "py-0 max-h-0 border-b-0 opacity-0" : "py-6 max-h-32 opacity-100"
+          }`}
+        >
           <Link href="/">
             <h1 className="font-serif text-4xl md:text-5xl font-black tracking-tight text-ink">
               rockland.news
@@ -33,8 +44,18 @@ export default function Header() {
           </Link>
         </div>
 
-        {/* Desktop nav */}
+        {/* Desktop nav — shows compact site name when scrolled */}
         <nav className="hidden lg:flex items-center justify-center gap-8 py-3 border-b border-rule">
+          <Link
+            href="/"
+            className={`font-serif font-black text-ink transition-all duration-300 ease-in-out mr-2 ${
+              scrolled
+                ? "text-xl opacity-100 max-w-48"
+                : "text-[0px] opacity-0 max-w-0"
+            } overflow-hidden whitespace-nowrap`}
+          >
+            rockland.news
+          </Link>
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -53,7 +74,15 @@ export default function Header() {
         </nav>
 
         {/* Mobile menu button */}
-        <div className="lg:hidden flex justify-end py-3 border-b border-rule">
+        <div className="lg:hidden flex items-center justify-between py-3 border-b border-rule">
+          <Link
+            href="/"
+            className={`font-serif font-black text-ink transition-all duration-300 ${
+              scrolled ? "text-lg opacity-100" : "text-[0px] opacity-0"
+            }`}
+          >
+            rockland.news
+          </Link>
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="p-2 text-ink"

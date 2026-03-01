@@ -4,12 +4,12 @@
   --color-ink: #111111;
   --color-ink-light: #2a2a2a;
   --color-paper: #FAFAF8;
-  --color-paper-dark: #F0F0EC;
+  --color-paper-dark: #F2F1ED;
   --color-red: #C41E1E;
   --color-red-dark: #A11818;
   --color-red-light: #E8E0E0;
-  --color-gray: #6B6B6B;
-  --color-gray-light: #999999;
+  --color-gray: #555555;
+  --color-gray-light: #8a8a8a;
   --color-rule: #E5E5E0;
   --color-rule-dark: #D0D0CB;
 
@@ -47,4 +47,9 @@ h1, h2, h3, h4 {
 
 .prose a:hover {
   color: var(--color-red-dark);
+}
+
+/* Selection color */
+::selection {
+  background-color: #C41E1E20;
 }
