@@ -9,6 +9,7 @@ const navLinks = [
   { href: "/podcast", label: "Podcast" },
   { href: "/budget", label: "Follow the Money" },
   { href: "/development", label: "Development Watch" },
+  { href: "/ask", label: "Ask" },
   { href: "/about", label: "About" },
 ];
 
