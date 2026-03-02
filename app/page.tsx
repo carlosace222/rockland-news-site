@@ -98,6 +98,42 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Ask the Chatbot */}
+      <section className="border-t border-rule py-12">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="text-center mb-6">
+            <p className="text-[0.6875rem] font-semibold tracking-[0.12em] uppercase text-red mb-3">
+              rockland311
+            </p>
+            <h2 className="font-serif text-3xl font-bold text-ink mb-2">
+              Ask about your government
+            </h2>
+            <p className="text-base text-gray max-w-xl mx-auto">
+              Budget questions, school spending, FOIL requests, property taxes —
+              ask anything about Rockland County.
+            </p>
+          </div>
+          <div className="border border-rule rounded-sm overflow-hidden" style={{ height: "500px" }}>
+            <iframe
+              src="https://www.chatbase.co/chatbot-iframe/YcpPEoUDSRWvgvyQ6gOyR"
+              title="rockland.news civic assistant"
+              width="100%"
+              height="100%"
+              style={{ border: "none" }}
+              allow="microphone"
+            />
+          </div>
+          <p className="text-center mt-4">
+            <Link
+              href="/ask"
+              className="text-sm text-red font-medium hover:underline"
+            >
+              Open full assistant &rarr;
+            </Link>
+          </p>
+        </div>
+      </section>
+
       {/* How it works */}
       <section className="border-t border-rule py-16 bg-paper-dark">
         <div className="max-w-4xl mx-auto px-4">
@@ -130,10 +166,10 @@ export default function Home() {
               <p className="font-serif text-5xl font-black text-red/20 mb-4">III.</p>
               <h3 className="font-semibold text-ink mb-2">You get the story</h3>
               <p className="text-sm text-gray leading-relaxed">
-                Evidence Briefs, daily podcast, explainers, and a chatbot at{" "}
-                <span className="text-red underline">
-                  rockland311.news
-                </span>{" "}
+                Evidence Briefs, daily podcast, explainers, and a{" "}
+                <Link href="/ask" className="text-red underline">
+                  civic assistant
+                </Link>{" "}
                 where you can ask any question about local government.
               </p>
             </div>
