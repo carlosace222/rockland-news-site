@@ -20,12 +20,23 @@ export default function Newsletter() {
         </p>
       </div>
 
-      {/* Placeholder for beehiiv embed */}
-      <div className="border-2 border-dashed border-rule p-12 text-center mb-12">
-        <p className="text-gray mb-2">Newsletter signup form</p>
-        <p className="text-sm text-gray">
-          beehiiv embed will go here
-        </p>
+      {/* beehiiv signup embed */}
+      <div className="mb-12">
+        <iframe
+          src="https://subscribe-forms.beehiiv.com/a4a24c6e-152f-43b4-af37-7694a521ef59"
+          className="beehiiv-embed"
+          data-test-id="beehiiv-embed"
+          height="339"
+          frameBorder="0"
+          scrolling="no"
+          style={{
+            margin: 0,
+            borderRadius: "0px",
+            backgroundColor: "transparent",
+            width: "100%",
+            maxWidth: "100%",
+          }}
+        />
       </div>
 
       <div className="max-w-lg mx-auto">

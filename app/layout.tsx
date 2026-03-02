@@ -43,6 +43,11 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        {/* beehiiv subscribe form embed */}
+        <script
+          async
+          src="https://subscribe-forms.beehiiv.com/embed.js"
+        />
         {/* Chatbase floating widget */}
         <script
           dangerouslySetInnerHTML={{
