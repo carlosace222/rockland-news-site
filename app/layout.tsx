@@ -43,6 +43,23 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        {/* Chatbase floating widget */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.embeddedChatbotConfig = {
+                chatbotId: "YcpPEoUDSRWvgvyQ6gOyR",
+                domain: "www.chatbase.co"
+              };
+            `,
+          }}
+        />
+        <script
+          src="https://www.chatbase.co/embed.min.js"
+          data-chatbotid="YcpPEoUDSRWvgvyQ6gOyR"
+          data-domain="www.chatbase.co"
+          defer
+        />
       </body>
     </html>
   );
