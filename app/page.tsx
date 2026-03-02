@@ -65,6 +65,39 @@ export default function Home() {
       {/* Browse by Topic */}
       <BrowseByTopic />
 
+      {/* Latest Evidence Brief */}
+      <section className="border-t border-rule py-12">
+        <div className="max-w-4xl mx-auto px-4">
+          <p className="text-[0.6875rem] font-semibold tracking-[0.12em] uppercase text-red mb-6">
+            Latest Evidence Brief
+          </p>
+          <Link
+            href="/evidence-briefs/school-district-spending-gap"
+            className="block group border border-rule p-6 md:p-8 hover:border-red/40 hover:shadow-sm transition-all"
+          >
+            <div className="flex items-center gap-3 mb-3">
+              <span className="text-[0.625rem] font-semibold tracking-[0.12em] uppercase text-red">
+                Follow the Money
+              </span>
+              <span className="text-[0.625rem] text-gray-light">March 1, 2026</span>
+            </div>
+            <h3 className="font-serif text-2xl md:text-3xl font-bold text-ink group-hover:text-red transition-colors mb-2">
+              The $9,403 Gap
+            </h3>
+            <p className="text-base text-gray-light mb-3">
+              Why Rockland&apos;s School Spending Varies by 33% Across District Lines
+            </p>
+            <p className="text-sm text-gray leading-relaxed max-w-2xl">
+              Per-pupil spending across Rockland&apos;s eight school districts ranges from $28,891 to
+              $38,294. What&apos;s driving the gap — and what does it mean for Clarkstown?
+            </p>
+            <span className="inline-block mt-4 text-sm text-red font-medium group-hover:underline">
+              Read the full brief &rarr;
+            </span>
+          </Link>
+        </div>
+      </section>
+
       {/* How it works */}
       <section className="border-t border-rule py-16 bg-paper-dark">
         <div className="max-w-4xl mx-auto px-4">
