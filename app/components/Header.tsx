@@ -22,8 +22,7 @@ export default function Header() {
     const handleScroll = () => {
       if (!ticking) {
         requestAnimationFrame(() => {
-          const y = window.scrollY;
-          setScrolled((prev) => (prev ? y > 40 : y > 80));
+          setScrolled(window.scrollY > 80);
           ticking = false;
         });
         ticking = true;
@@ -34,104 +33,104 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={`bg-paper sticky top-0 z-50 transition-shadow duration-300 ${scrolled ? "shadow-sm" : ""}`}>
-      {/* Top rule */}
-      <div className="border-t-[3px] border-red" />
-
-      <div className="max-w-5xl mx-auto px-4">
-        {/* Masthead — collapses on scroll */}
-        <div
-          className={`text-center border-b border-rule overflow-hidden transition-all duration-300 ease-in-out ${
-            scrolled ? "py-0 max-h-0 border-b-0 opacity-0" : "py-6 max-h-32 opacity-100"
-          }`}
-        >
-          <Link href="/">
-            <h1 className="font-serif text-4xl md:text-5xl font-black tracking-tight text-ink">
-              rockland.news
-            </h1>
-            <p className="text-[0.6875rem] font-sans font-semibold tracking-[0.12em] uppercase text-gray mt-1">
-              Civic Transparency for Rockland County
-            </p>
-          </Link>
-        </div>
-
-        {/* Desktop nav — shows compact site name when scrolled */}
-        <nav className="hidden lg:flex items-center justify-center gap-8 py-3 border-b border-rule">
-          <Link
-            href="/"
-            className={`font-serif font-black text-ink transition-all duration-300 ease-in-out mr-2 ${
-              scrolled
-                ? "text-xl opacity-100 max-w-48"
-                : "text-[0px] opacity-0 max-w-0"
-            } overflow-hidden whitespace-nowrap`}
-          >
-            rockland.news
-          </Link>
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-[0.8125rem] font-medium text-ink hover:text-red transition-colors"
-            >
-              {link.label}
+    <>
+      {/* Masthead — scrolls away naturally, never sticky */}
+      <header className="bg-paper border-t-[3px] border-red">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="text-center py-6 border-b border-rule">
+            <Link href="/">
+              <h1 className="font-serif text-4xl md:text-5xl font-black tracking-tight text-ink">
+                rockland.news
+              </h1>
+              <p className="text-[0.6875rem] font-sans font-semibold tracking-[0.12em] uppercase text-gray mt-1">
+                Civic Transparency for Rockland County
+              </p>
             </Link>
-          ))}
-          <Link
-            href="/newsletter"
-            className="text-[0.8125rem] font-semibold text-red hover:text-red-dark transition-colors"
-          >
-            Subscribe
-          </Link>
-        </nav>
-
-        {/* Mobile menu button */}
-        <div className="lg:hidden flex items-center justify-between py-3 border-b border-rule">
-          <Link
-            href="/"
-            className={`font-serif font-black text-ink transition-all duration-300 ${
-              scrolled ? "text-lg opacity-100" : "text-[0px] opacity-0"
-            }`}
-          >
-            rockland.news
-          </Link>
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="p-2 text-ink"
-            aria-label="Toggle menu"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {menuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
+          </div>
         </div>
+      </header>
 
-        {/* Mobile nav */}
-        {menuOpen && (
-          <nav className="lg:hidden py-4 border-b border-rule flex flex-col gap-3">
+      {/* Nav — sticky, constant height, no layout shift */}
+      <div className={`sticky top-0 z-50 bg-paper transition-shadow duration-300 ${scrolled ? "shadow-sm" : ""}`}>
+        <div className="max-w-5xl mx-auto px-4">
+          {/* Desktop nav */}
+          <nav className="hidden lg:flex items-center justify-center gap-8 py-3 border-b border-rule">
+            <Link
+              href="/"
+              className={`font-serif font-black text-ink transition-all duration-300 ease-in-out mr-2 ${
+                scrolled
+                  ? "text-xl opacity-100 max-w-48"
+                  : "text-[0px] opacity-0 max-w-0"
+              } overflow-hidden whitespace-nowrap`}
+            >
+              rockland.news
+            </Link>
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm text-ink hover:text-red transition-colors"
-                onClick={() => setMenuOpen(false)}
+                className="text-[0.8125rem] font-medium text-ink hover:text-red transition-colors"
               >
                 {link.label}
               </Link>
             ))}
             <Link
               href="/newsletter"
-              className="text-sm font-semibold text-red"
-              onClick={() => setMenuOpen(false)}
+              className="text-[0.8125rem] font-semibold text-red hover:text-red-dark transition-colors"
             >
               Subscribe
             </Link>
           </nav>
-        )}
+
+          {/* Mobile menu button */}
+          <div className="lg:hidden flex items-center justify-between py-3 border-b border-rule">
+            <Link
+              href="/"
+              className={`font-serif font-black text-ink transition-all duration-300 ${
+                scrolled ? "text-lg opacity-100" : "text-[0px] opacity-0"
+              }`}
+            >
+              rockland.news
+            </Link>
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="p-2 text-ink"
+              aria-label="Toggle menu"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {menuOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
+          </div>
+
+          {/* Mobile nav */}
+          {menuOpen && (
+            <nav className="lg:hidden py-4 border-b border-rule flex flex-col gap-3">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm text-ink hover:text-red transition-colors"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <Link
+                href="/newsletter"
+                className="text-sm font-semibold text-red"
+                onClick={() => setMenuOpen(false)}
+              >
+                Subscribe
+              </Link>
+            </nav>
+          )}
+        </div>
       </div>
-    </header>
+    </>
   );
 }
