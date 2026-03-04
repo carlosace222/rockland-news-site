@@ -9,6 +9,16 @@ export const metadata: Metadata = {
 
 const briefs = [
   {
+    slug: "east-ramapo-spending",
+    title: "East Ramapo Spends 3x the County Average on Busing",
+    subtitle: "While Ranking Last in Classroom Spending — Here's What Would Change That",
+    pillar: "Follow the Money",
+    date: "March 2026",
+    tier: "free" as const,
+    description:
+      "East Ramapo spends $6,053 per student on transportation — three times the county average — while ranking dead last in instruction. A $43.3 million accounting failure, a 43% ELL graduation rate, and four evidence-based recommendations.",
+  },
+  {
     slug: "school-district-spending-gap",
     title: "The $9,403 Gap",
     subtitle: "Why Rockland's School Spending Varies by 33% Across District Lines",

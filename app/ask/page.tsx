@@ -12,7 +12,7 @@ export default function AskPage() {
       {/* Header */}
       <div className="max-w-4xl mx-auto px-4 pt-10 pb-6 text-center w-full">
         <span className="text-[0.6875rem] font-semibold tracking-[0.12em] uppercase text-red">
-          rockland311.news
+          rockland.news
         </span>
         <h1 className="font-serif text-3xl md:text-4xl font-bold text-ink mt-2 mb-3">
           Ask About Rockland County

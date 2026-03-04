@@ -48,7 +48,7 @@ export default function Footer() {
               <li><Link href="/about" className="text-ink hover:text-red transition-colors">Our Mission</Link></li>
               <li><Link href="/methodology" className="text-ink hover:text-red transition-colors">Methodology</Link></li>
               <li><Link href="/contact" className="text-ink hover:text-red transition-colors">Contact &amp; Tips</Link></li>
-              <li><a href="https://rockland311.news" className="text-ink hover:text-red transition-colors">rockland311.news</a></li>
+              <li><Link href="/ask" className="text-ink hover:text-red transition-colors">Ask a Question</Link></li>
             </ul>
           </div>
         </div>
