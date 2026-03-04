@@ -48,6 +48,16 @@ const briefs = [
     description:
       "The legislature met 36 times in 2025 but published minutes for only two-thirds of those sessions. The documentation gap is widening.",
   },
+  {
+    slug: "2025-budget-proposed-vs-adopted",
+    title: "The $471,675 Question",
+    subtitle: "What the Legislature Changed in the 2025 County Budget",
+    pillar: "Follow the Money",
+    date: "February 2026",
+    tier: "insider" as const,
+    description:
+      "The County Executive proposed $876 million. The legislature changed $471,675 — touching 6 of 39 departments, all increases, totaling 0.054% of spending.",
+  },
 ];
 
 export default function EvidenceBriefs() {
