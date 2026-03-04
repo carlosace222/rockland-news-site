@@ -310,21 +310,16 @@ export default function LegislativeTransparency() {
           because analysis that can&apos;t be wrong can&apos;t be trusted.
         </p>
         <p className="mb-3">
-          Found an error? Email{" "}
+          Found an error or disagree with our analysis? Reach us on{" "}
           <a
-            href="mailto:corrections@rockland.news"
+            href="https://x.com/RocklandDOTNews"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-red underline underline-offset-2 hover:text-red-dark"
           >
-            corrections@rockland.news
+            @RocklandDOTNews
           </a>
-          . Disagree with our analysis? We publish responses:{" "}
-          <a
-            href="mailto:letters@rockland.news"
-            className="text-red underline underline-offset-2 hover:text-red-dark"
-          >
-            letters@rockland.news
-          </a>
-          .
+          . We publish corrections and responses.
         </p>
         <p>
           This is the first Evidence Brief in the rockland.news Legislative Accountability Series.
