@@ -4,7 +4,7 @@ const topics = [
   {
     title: "Follow the Money",
     href: "/budget",
-    description: "Budgets, contracts, and where tax dollars go",
+    description: "Budgets, spending, and where tax dollars go",
     icon: (
       <svg
         className="w-10 h-10"
@@ -22,38 +22,9 @@ const topics = [
     ),
   },
   {
-    title: "Development Watch",
-    href: "/development",
-    description: "Zoning, planning boards, and what\u2019s being built",
-    icon: (
-      <svg
-        className="w-10 h-10"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth={1.5}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        {/* Lucide-style building icon */}
-        <rect x="4" y="2" width="16" height="20" rx="2" />
-        <path d="M9 22v-4h6v4" />
-        <path d="M8 6h.01" />
-        <path d="M16 6h.01" />
-        <path d="M12 6h.01" />
-        <path d="M12 10h.01" />
-        <path d="M12 14h.01" />
-        <path d="M16 10h.01" />
-        <path d="M16 14h.01" />
-        <path d="M8 10h.01" />
-        <path d="M8 14h.01" />
-      </svg>
-    ),
-  },
-  {
     title: "Accountability Tracker",
     href: "/accountability",
-    description: "Votes, campaign donors, and conflicts of interest",
+    description: "Votes, campaign donors, and legislative patterns",
     icon: (
       <svg
         className="w-10 h-10"
@@ -106,7 +77,7 @@ export default function BrowseByTopic() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
           {topics.map((topic) => (
             <Link
               key={topic.href}

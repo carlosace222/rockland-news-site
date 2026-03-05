@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Follow the Money",
   description:
-    "Budget analysis, vendor contracts, and spending trends across every level of Rockland County government.",
+    "Budget analysis and spending trends across every level of Rockland County government.",
 };
 
 export default function Budget() {
@@ -18,8 +18,8 @@ export default function Budget() {
           Follow the Money
         </h1>
         <p className="text-lg text-gray leading-relaxed max-w-2xl">
-          Where does your property tax dollar go? We track budgets, vendor
-          contracts, and spending trends across the county, all five towns, and
+          Where does your property tax dollar go? We track budgets and
+          spending trends across the county, all five towns, and
           eight school districts. Every number sourced to a public document.
         </p>
       </div>
@@ -31,7 +31,7 @@ export default function Budget() {
             <li>County operating and capital budgets (FY2021–2026)</li>
             <li>Town budgets across all five municipalities</li>
             <li>School district expenditures and per-pupil spending</li>
-            <li>Vendor contracts and procurement patterns</li>
+            <li>Revenue sources and fund balances</li>
             <li>Budget-to-actual variances and year-over-year trends</li>
           </ul>
         </div>

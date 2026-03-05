@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Accountability Tracker",
   description:
-    "Campaign finance, legislative voting records, and donor-vendor overlaps in Rockland County government.",
+    "Campaign finance and legislative voting records in Rockland County government.",
 };
 
 export default function Accountability() {
@@ -18,9 +18,9 @@ export default function Accountability() {
           Accountability Tracker
         </h1>
         <p className="text-lg text-gray leading-relaxed max-w-2xl">
-          Who donates to Rockland County campaigns? Who gets the contracts? How do
-          legislators vote? We track the connections — not to assume the worst,
-          but to document the patterns the public record reveals.
+          Who donates to Rockland County campaigns? How do legislators vote?
+          We track the patterns — not to assume the worst, but to document
+          what the public record reveals.
         </p>
       </div>
 
@@ -29,8 +29,7 @@ export default function Accountability() {
           <h3 className="font-semibold mb-2">What we track</h3>
           <ul className="text-sm text-gray space-y-2">
             <li>8,270+ campaign contributions from NY BOE filings</li>
-            <li>Vendor contracts and procurement awards</li>
-            <li>Donor-to-vendor cross-references</li>
+            <li>Donation patterns by industry and geography</li>
             <li>Legislative voting records and attendance</li>
             <li>FOIL request compliance by municipality</li>
           </ul>
@@ -39,11 +38,10 @@ export default function Accountability() {
           <h3 className="font-semibold mb-2">Key findings so far</h3>
           <ul className="text-sm text-gray space-y-2">
             <li>
-              Organic Recycling: $8,500 in campaign contributions from a
-              company with active county contracts
+              8,270+ campaign contributions catalogued from NY BOE filings
             </li>
             <li>
-              Multiple donor-vendor overlaps identified and documented
+              Donation concentration patterns across county races documented
             </li>
           </ul>
         </div>

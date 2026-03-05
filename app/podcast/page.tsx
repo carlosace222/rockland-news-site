@@ -16,8 +16,8 @@ export default function Podcast() {
         </h1>
         <p className="text-lg text-gray leading-relaxed max-w-2xl">
           A daily podcast that covers what&apos;s happening in Rockland County
-          government. Budget decisions, development applications, legislative
-          votes, and the stories behind the numbers — in under 10 minutes.
+          government. Budget decisions, legislative votes, and the stories
+          behind the numbers — in under 10 minutes.
         </p>
       </div>
 
@@ -28,7 +28,7 @@ export default function Podcast() {
           <ul className="text-sm text-gray space-y-2">
             <li>Daily briefing on local government activity</li>
             <li>Budget and spending updates</li>
-            <li>Development and zoning news</li>
+            <li>School district spending updates</li>
             <li>Meeting previews and recaps</li>
             <li>Campaign finance highlights</li>
           </ul>

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Newsletter",
   description:
-    "Weekly Evidence Briefs, budget breakdowns, and civic updates for Rockland County. Free.",
+    "Weekly Evidence Briefs, budget breakdowns, and civic analysis for Rockland County. Free.",
 };
 
 export default function Newsletter() {
@@ -14,9 +14,8 @@ export default function Newsletter() {
           The rockland.news Newsletter
         </h1>
         <p className="text-lg text-gray leading-relaxed">
-          Evidence Briefs, budget breakdowns, development updates, and civic
-          analysis — delivered to your inbox weekly. Free. No spam. No partisan
-          spin.
+          Evidence Briefs, budget breakdowns, and civic analysis — delivered
+          to your inbox weekly. Free. No spam. No partisan spin.
         </p>
       </div>
 
@@ -54,7 +53,7 @@ export default function Newsletter() {
           </li>
           <li className="flex gap-3">
             <span className="text-ink font-bold">As needed</span>
-            <span>Breaking budget decisions and development alerts</span>
+            <span>Breaking budget decisions and civic alerts</span>
           </li>
         </ul>
       </div>

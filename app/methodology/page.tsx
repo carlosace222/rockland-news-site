@@ -24,8 +24,8 @@ export default function Methodology() {
           We run automated scrapers against 15+ public government data sources on
           a regular schedule. These include county and town budget documents,
           meeting agendas and minutes, New York Board of Elections campaign finance
-          filings, NYSED school district reports, vendor contract listings, and
-          county legislature records.
+          filings, NYSED school district reports, and county legislature
+          records.
         </p>
         <p>
           All scrapers include change detection — we only process documents when
@@ -38,14 +38,15 @@ export default function Methodology() {
         </h2>
         <p>
           Our database links entities across datasets using fuzzy matching.
-          This allows us to answer questions like: &quot;Which campaign donors also
-          have county vendor contracts?&quot; or &quot;How does this town&apos;s budget growth
-          compare to inflation and peer municipalities?&quot;
+          This allows us to answer questions like: &quot;How does this town&apos;s budget
+          growth compare to inflation and peer municipalities?&quot; or &quot;Which
+          legislators voted for this spending increase?&quot;
         </p>
         <p>
-          When we identify a pattern — such as a donor-vendor overlap — we report
-          the connection and the dollar amounts, not a conclusion about intent.
-          Correlation is documented. Causation requires more evidence.
+          When we identify a pattern — such as unusual spending growth or
+          budget anomalies — we report the data and the context, not a
+          conclusion about intent. Correlation is documented. Causation requires
+          more evidence.
         </p>
 
         <h2 className="font-serif text-2xl font-bold mt-8 mb-4">

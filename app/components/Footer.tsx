@@ -34,7 +34,6 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-sm">
               <li><Link href="/budget" className="text-ink hover:text-red transition-colors">Follow the Money</Link></li>
-              <li><Link href="/development" className="text-ink hover:text-red transition-colors">Development Watch</Link></li>
               <li><Link href="/accountability" className="text-ink hover:text-red transition-colors">Accountability Tracker</Link></li>
             </ul>
           </div>

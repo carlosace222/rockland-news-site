@@ -9,11 +9,11 @@ export const metadata: Metadata = {
     template: "%s | rockland.news",
   },
   description:
-    "Data-driven local government accountability for Rockland County, NY. Budget analysis, campaign finance tracking, development watch, and more. Every claim sourced. Every number traceable.",
+    "Data-driven local government accountability for Rockland County, NY. Budget analysis, campaign finance tracking, and more. Every claim sourced. Every number traceable.",
   openGraph: {
     title: "rockland.news",
     description:
-      "Civic transparency for Rockland County. Follow the money. Watch the development. Track the accountability.",
+      "Civic transparency for Rockland County. Follow the money. Track the accountability.",
     url: "https://rockland.news",
     siteName: "rockland.news",
     locale: "en_US",

@@ -22,7 +22,7 @@ export default function Home() {
           One question: <em className="font-serif">where is the money going?</em>
         </p>
         <p className="text-base text-gray-light mb-10 max-w-xl mx-auto leading-relaxed">
-          We read the budgets, track the contracts, and follow the campaign money —
+          We read the budgets, analyze the spending, and follow the campaign money —
           so you don&apos;t have to read 47-page PDFs to know what&apos;s happening
           with your government.
         </p>
