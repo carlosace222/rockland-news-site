@@ -47,15 +47,23 @@ export default function Accountability() {
         </div>
       </div>
 
-      <div className="text-center py-12 border border-dashed border-rule">
-        <p className="text-gray mb-4">
-          Accountability analyses and Evidence Briefs publishing soon.
-        </p>
+      <div className="border-t border-rule pt-8">
+        <h3 className="font-semibold mb-4">Evidence Briefs</h3>
         <Link
-          href="/newsletter"
-          className="inline-block bg-ink text-white text-sm px-6 py-2 hover:bg-ink-light transition-colors"
+          href="/evidence-briefs/legislative-transparency"
+          className="block border border-rule p-6 hover:border-red transition-colors group"
         >
-          Get notified
+          <span className="text-[0.6875rem] font-semibold tracking-[0.1em] uppercase text-red">
+            Legislative Accountability Series
+          </span>
+          <h4 className="font-serif text-xl font-bold mt-1 mb-2 group-hover:text-red transition-colors">
+            Legislative Transparency: What 102 Meetings Reveal
+          </h4>
+          <p className="text-sm text-gray leading-relaxed">
+            Two years of county legislature data analyzed. Meeting frequency,
+            committee structure, and what the public record does and doesn&apos;t
+            show about how decisions get made.
+          </p>
         </Link>
       </div>
     </div>
