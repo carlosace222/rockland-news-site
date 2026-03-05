@@ -30,7 +30,7 @@ export default function Podcast() {
             <li>Budget and spending updates</li>
             <li>School district spending updates</li>
             <li>Meeting previews and recaps</li>
-            <li>Campaign finance highlights</li>
+            <li>Evidence Brief highlights</li>
           </ul>
         </div>
         <div className="border border-rule p-6">

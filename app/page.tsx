@@ -3,7 +3,7 @@ import BrowseByTopic from "./components/BrowseByTopic";
 
 const dataHighlights = [
   { number: "47,638+", label: "Financial records", sublabel: "FY2021–2026" },
-  { number: "8,270", label: "Campaign contributions", sublabel: "NY Board of Elections" },
+  { number: "102", label: "Legislature meetings", sublabel: "Agendas, minutes, votes" },
   { number: "3,083", label: "Meeting documents", sublabel: "5 towns + county" },
   { number: "8", label: "School districts", sublabel: "Enrollment, spending, outcomes" },
 ];
@@ -22,7 +22,7 @@ export default function Home() {
           One question: <em className="font-serif">where is the money going?</em>
         </p>
         <p className="text-base text-gray-light mb-10 max-w-xl mx-auto leading-relaxed">
-          We read the budgets, analyze the spending, and follow the campaign money —
+          We read the budgets, analyze the spending, and track the policy decisions —
           so you don&apos;t have to read 47-page PDFs to know what&apos;s happening
           with your government.
         </p>
@@ -114,7 +114,7 @@ export default function Home() {
               <p className="font-serif text-5xl font-black text-red/20 mb-4">I.</p>
               <h3 className="font-semibold text-ink mb-2">We collect the data</h3>
               <p className="text-sm text-gray leading-relaxed">
-                Automated scrapers pull budgets, agendas, campaign filings, and
+                Automated scrapers pull budgets, agendas, school reports, and
                 public records from 15+ government sources every week.
               </p>
             </div>
@@ -122,8 +122,8 @@ export default function Home() {
               <p className="font-serif text-5xl font-black text-red/20 mb-4">II.</p>
               <h3 className="font-semibold text-ink mb-2">We analyze the patterns</h3>
               <p className="text-sm text-gray leading-relaxed">
-                Cross-reference spending with donations. Compare budgets across
-                towns. Flag anomalies. Connect the dots no single document shows.
+                Compare budgets across towns and districts. Flag anomalies.
+                Track spending trends. Connect the dots no single document shows.
               </p>
             </div>
             <div>

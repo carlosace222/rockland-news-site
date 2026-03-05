@@ -24,7 +24,7 @@ const topics = [
   {
     title: "Accountability Tracker",
     href: "/accountability",
-    description: "Votes, campaign donors, and legislative patterns",
+    description: "Legislative votes, meeting records, and policy patterns",
     icon: (
       <svg
         className="w-10 h-10"

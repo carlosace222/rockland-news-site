@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Accountability Tracker",
   description:
-    "Campaign finance and legislative voting records in Rockland County government.",
+    "Legislative voting records, meeting transparency, and policy accountability in Rockland County government.",
 };
 
 export default function Accountability() {
@@ -18,9 +18,9 @@ export default function Accountability() {
           Accountability Tracker
         </h1>
         <p className="text-lg text-gray leading-relaxed max-w-2xl">
-          Who donates to Rockland County campaigns? How do legislators vote?
+          How do legislators vote? How transparent are public meetings?
           We track the patterns — not to assume the worst, but to document
-          what the public record reveals.
+          what the public record reveals about how decisions get made.
         </p>
       </div>
 
@@ -28,9 +28,9 @@ export default function Accountability() {
         <div className="border border-rule p-6">
           <h3 className="font-semibold mb-2">What we track</h3>
           <ul className="text-sm text-gray space-y-2">
-            <li>8,270+ campaign contributions from NY BOE filings</li>
-            <li>Donation patterns by industry and geography</li>
             <li>Legislative voting records and attendance</li>
+            <li>Meeting frequency, agendas, and minutes availability</li>
+            <li>Committee structure and decision-making patterns</li>
             <li>FOIL request compliance by municipality</li>
           </ul>
         </div>
@@ -38,10 +38,10 @@ export default function Accountability() {
           <h3 className="font-semibold mb-2">Key findings so far</h3>
           <ul className="text-sm text-gray space-y-2">
             <li>
-              8,270+ campaign contributions catalogued from NY BOE filings
+              33% of expected county legislature meetings have no public minutes
             </li>
             <li>
-              Donation concentration patterns across county races documented
+              102 meetings analyzed across two years of legislative activity
             </li>
           </ul>
         </div>

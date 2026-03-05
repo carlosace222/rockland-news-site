@@ -23,9 +23,8 @@ export default function Methodology() {
         <p>
           We run automated scrapers against 15+ public government data sources on
           a regular schedule. These include county and town budget documents,
-          meeting agendas and minutes, New York Board of Elections campaign finance
-          filings, NYSED school district reports, and county legislature
-          records.
+          meeting agendas and minutes, NYSED school district reports, and
+          county legislature records.
         </p>
         <p>
           All scrapers include change detection — we only process documents when

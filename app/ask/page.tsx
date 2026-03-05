@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Ask About Rockland County Government",
   description:
-    "Ask questions about Rockland County government, budgets, school districts, campaign finance, and more. Powered by the rockland.news public records database.",
+    "Ask questions about Rockland County government, budgets, school districts, legislative records, and more. Powered by the rockland.news public records database.",
 };
 
 export default function AskPage() {
@@ -19,7 +19,7 @@ export default function AskPage() {
         </h1>
         <p className="text-base text-gray leading-relaxed max-w-2xl mx-auto">
           Ask any question about Rockland County government — budgets, school
-          spending, campaign finance, meeting records, property taxes, or how to
+          spending, school districts, meeting records, property taxes, or how to
           file a FOIL request. Powered by 50,000+ public records.
         </p>
       </div>

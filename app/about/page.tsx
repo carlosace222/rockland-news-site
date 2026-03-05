@@ -17,8 +17,8 @@ export default function About() {
         <p>
           Rockland County has 330,000 residents, a $900 million county budget, five
           towns, and eight school districts. The information about how all of this
-          works — budgets, campaign donations,
-          legislative votes — is technically public. But it&apos;s scattered across
+          works — budgets, school spending, legislative votes — is technically
+          public. But it&apos;s scattered across
           dozens of websites, buried in PDFs, and written in jargon designed for
           insiders.
         </p>
@@ -31,8 +31,8 @@ export default function About() {
         <h2 className="font-serif text-2xl font-bold mt-8 mb-4">What We Do</h2>
         <p>
           We close the gap. Our automated systems collect public data from 15+
-          government sources every week — budgets, meeting agendas, campaign
-          filings, and school district reports. We cross-reference it, analyze the patterns, and publish
+          government sources every week — budgets, meeting agendas, legislative
+          records, and school district reports. We cross-reference it, analyze the patterns, and publish
           what we find in plain language.
         </p>
         <p>
