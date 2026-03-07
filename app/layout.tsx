@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { PlausibleProvider, OrganizationJsonLd } from "./components/tracking";
 
 export const metadata: Metadata = {
   title: {
@@ -24,6 +25,23 @@ export const metadata: Metadata = {
     title: "rockland.news",
     description: "Civic transparency for Rockland County, NY",
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: "https://rockland.news",
+  },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",
+  },
 };
 
 export default function RootLayout({
@@ -40,6 +58,8 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen flex flex-col">
+        <PlausibleProvider />
+        <OrganizationJsonLd />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
