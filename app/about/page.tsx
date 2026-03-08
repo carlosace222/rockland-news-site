@@ -229,15 +229,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* ── Tier 3: One Image ── */}
-      <section className="py-16 md:py-24 border-b border-rule">
-        <p className="text-[0.6875rem] font-semibold tracking-[0.12em] uppercase text-red mb-8 md:mb-12">
-          rockland.news in One Image
-        </p>
-        <FlowDiagram />
-      </section>
-
-      {/* ── Tier 4: One Thousand Words ── */}
+      {/* ── Tier 3: One Thousand Words ── */}
       <section className="py-16 md:py-20 border-b border-rule">
         <p className="text-[0.6875rem] font-semibold tracking-[0.12em] uppercase text-red mb-8">
           rockland.news in One Thousand Words
@@ -345,7 +337,7 @@ export default function About() {
             The tools accelerate the work. The judgment remains human.
           </p>
 
-          <h2 className="font-serif text-2xl font-bold mt-10 mb-4">
+          <h2 id="editor" className="font-serif text-2xl font-bold mt-10 mb-4">
             Who built this
           </h2>
           <p>
@@ -408,6 +400,14 @@ export default function About() {
             political considerations.
           </p>
         </div>
+      </section>
+
+      {/* ── Tier 4: One Image ── */}
+      <section className="py-16 md:py-24 border-b border-rule">
+        <p className="text-[0.6875rem] font-semibold tracking-[0.12em] uppercase text-red mb-8 md:mb-12">
+          rockland.news in One Image
+        </p>
+        <FlowDiagram />
       </section>
 
       {/* ── Tier 5: One Evidence Brief ── */}

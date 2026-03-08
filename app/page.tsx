@@ -2,12 +2,55 @@ import Link from "next/link";
 import BrowseByTopic from "./components/BrowseByTopic";
 
 const dataHighlights = [
-  { number: "47,638+", label: "Financial records", sublabel: "FY2021–2026" },
-  { number: "102", label: "Legislature meetings", sublabel: "Agendas, minutes, votes" },
-  { number: "3,083", label: "Meeting documents", sublabel: "5 towns + county" },
-  { number: "8", label: "School districts", sublabel: "Enrollment, spending, outcomes" },
+  {
+    number: "47,638+",
+    label: "Financial records",
+    sublabel: "FY2021\u20132026",
+    href: "/budget",
+  },
+  {
+    number: "102",
+    label: "Legislature meetings",
+    sublabel: "Agendas, minutes, votes",
+    href: "/accountability",
+  },
+  {
+    number: "3,083",
+    label: "Meeting documents",
+    sublabel: "5 towns + county",
+    href: "/accountability",
+  },
+  {
+    number: "8",
+    label: "School districts",
+    sublabel: "Enrollment, spending, outcomes",
+    href: "/evidence-briefs/school-district-spending-gap",
+  },
 ];
 
+const flagshipBriefs = [
+  {
+    href: "/evidence-briefs/school-district-spending-gap",
+    pillar: "Follow the Money",
+    title: "The $9,403 Gap",
+    summary:
+      "Per-pupil spending across Rockland\u2019s eight school districts ranges from $28,891 to $38,294 \u2014 a 33% gap across district lines.",
+  },
+  {
+    href: "/evidence-briefs/2026-county-budget",
+    pillar: "Follow the Money",
+    title: "2026 County Budget",
+    summary:
+      "A line-by-line breakdown of Rockland County\u2019s $900M+ budget \u2014 where the money comes from, where it goes, and what changed.",
+  },
+  {
+    href: "/evidence-briefs/legislative-transparency",
+    pillar: "Accountability",
+    title: "Legislative Transparency",
+    summary:
+      "How accessible are Rockland County Legislature proceedings? A review of meeting records, vote tracking, and public access.",
+  },
+];
 
 export default function Home() {
   return (
@@ -15,15 +58,17 @@ export default function Home() {
       {/* Hero */}
       <section className="max-w-3xl mx-auto px-4 pt-14 pb-12 text-center">
         <h1 className="font-serif text-4xl md:text-[3.25rem] font-black leading-[1.12] tracking-tight text-ink mb-6">
-          Rockland County deserves<br className="hidden md:block" /> better information.
+          Rockland County deserves
+          <br className="hidden md:block" /> better information.
         </h1>
         <p className="text-lg md:text-xl text-gray leading-relaxed mb-5 max-w-2xl mx-auto">
-          330,000 residents. A $900 million county budget. Five towns. Eight school districts.
-          Budgets, contracts, votes, and zoning decisions spread across dozens of government
-          websites in dozens of formats.
+          330,000 residents. A $900 million county budget. Five towns. Eight
+          school districts. Budgets, contracts, votes, and zoning decisions
+          spread across dozens of government websites in dozens of formats.
         </p>
         <p className="text-base text-gray-light mb-10 max-w-xl mx-auto leading-relaxed">
-          We collect it, organize it, cross-reference it, and explain what it means.
+          We collect it, organize it, cross-reference it, and explain what it
+          means.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
@@ -41,21 +86,53 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Data bar */}
+      {/* Start Here */}
+      <section className="border-t border-rule py-8">
+        <div className="max-w-3xl mx-auto px-4">
+          <p className="text-sm text-gray-light mb-4 text-center">
+            New here? Start with:
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-6 text-center">
+            <Link
+              href="/about"
+              className="text-sm text-ink font-medium hover:text-red transition-colors underline underline-offset-2"
+            >
+              1. What rockland.news is
+            </Link>
+            <Link
+              href="/evidence-briefs/school-district-spending-gap"
+              className="text-sm text-ink font-medium hover:text-red transition-colors underline underline-offset-2"
+            >
+              2. Read a flagship Evidence Brief
+            </Link>
+            <Link
+              href="/ask"
+              className="text-sm text-ink font-medium hover:text-red transition-colors underline underline-offset-2"
+            >
+              3. Ask a question about your town
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Data bar — clickable stats */}
       <section className="border-t border-b border-rule py-8">
         <div className="max-w-5xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {dataHighlights.map((stat, i) => (
-              <div
+              <Link
                 key={stat.label}
-                className={`${i > 0 ? "md:border-l md:border-rule" : ""}`}
+                href={stat.href}
+                className={`group ${i > 0 ? "md:border-l md:border-rule" : ""}`}
               >
-                <p className="font-serif text-3xl md:text-4xl font-black text-ink">
+                <p className="font-serif text-3xl md:text-4xl font-black text-ink group-hover:text-red transition-colors">
                   {stat.number}
                 </p>
-                <p className="text-sm text-ink mt-1 font-medium">{stat.label}</p>
+                <p className="text-sm text-ink mt-1 font-medium group-hover:text-red transition-colors">
+                  {stat.label}
+                </p>
                 <p className="text-xs text-gray-light">{stat.sublabel}</p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -64,36 +141,34 @@ export default function Home() {
       {/* Browse by Topic */}
       <BrowseByTopic />
 
-      {/* Latest Evidence Brief */}
+      {/* Flagship Evidence Briefs */}
       <section className="border-t border-rule py-12">
         <div className="max-w-4xl mx-auto px-4">
           <p className="text-[0.6875rem] font-semibold tracking-[0.12em] uppercase text-red mb-6">
-            Latest Evidence Brief
+            Start with a flagship brief
           </p>
-          <Link
-            href="/evidence-briefs/school-district-spending-gap"
-            className="block group border border-rule p-6 md:p-8 hover:border-red/40 hover:shadow-sm transition-all"
-          >
-            <div className="flex items-center gap-3 mb-3">
-              <span className="text-[0.625rem] font-semibold tracking-[0.12em] uppercase text-red">
-                Follow the Money
-              </span>
-              <span className="text-[0.625rem] text-gray-light">March 1, 2026</span>
-            </div>
-            <h3 className="font-serif text-2xl md:text-3xl font-bold text-ink group-hover:text-red transition-colors mb-2">
-              The $9,403 Gap
-            </h3>
-            <p className="text-base text-gray-light mb-3">
-              Why Rockland&apos;s School Spending Varies by 33% Across District Lines
-            </p>
-            <p className="text-sm text-gray leading-relaxed max-w-2xl">
-              Per-pupil spending across Rockland&apos;s eight school districts ranges from $28,891 to
-              $38,294. What&apos;s driving the gap — and what does it mean for Clarkstown?
-            </p>
-            <span className="inline-block mt-4 text-sm text-red font-medium group-hover:underline">
-              Read the full brief &rarr;
-            </span>
-          </Link>
+          <div className="grid md:grid-cols-3 gap-4">
+            {flagshipBriefs.map((brief) => (
+              <Link
+                key={brief.href}
+                href={brief.href}
+                className="group block border border-rule p-5 hover:border-red/40 hover:shadow-sm transition-all"
+              >
+                <span className="text-[0.625rem] font-semibold tracking-[0.12em] uppercase text-red">
+                  {brief.pillar}
+                </span>
+                <h3 className="font-serif text-lg font-bold text-ink group-hover:text-red transition-colors mt-2 mb-2">
+                  {brief.title}
+                </h3>
+                <p className="text-sm text-gray leading-relaxed">
+                  {brief.summary}
+                </p>
+                <span className="inline-block mt-3 text-xs text-red font-medium group-hover:underline">
+                  Read the brief &rarr;
+                </span>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -110,34 +185,58 @@ export default function Home() {
           </div>
           <div className="grid md:grid-cols-3 gap-12">
             <div>
-              <p className="font-serif text-5xl font-black text-red/20 mb-4">I.</p>
-              <h3 className="font-semibold text-ink mb-2">We collect the records</h3>
+              <p className="font-serif text-5xl font-black text-red/20 mb-4">
+                I.
+              </p>
+              <h3 className="font-semibold text-ink mb-2">
+                We collect the records
+              </h3>
               <p className="text-sm text-gray leading-relaxed">
-                Software and automated workflows pull budgets, agendas, meeting minutes,
-                school reports, campaign finance filings, and other public records from
-                government sources across Rockland County.
+                Software and automated workflows pull budgets, agendas, meeting
+                minutes, school reports, campaign finance filings, and other
+                public records from government sources across Rockland County.
+              </p>
+              <p className="text-xs text-gray-light mt-2 italic">
+                Example: town budget PDFs, legislature agendas, BOE campaign
+                filings
               </p>
             </div>
             <div>
-              <p className="font-serif text-5xl font-black text-red/20 mb-4">II.</p>
-              <h3 className="font-semibold text-ink mb-2">We find the patterns</h3>
+              <p className="font-serif text-5xl font-black text-red/20 mb-4">
+                II.
+              </p>
+              <h3 className="font-semibold text-ink mb-2">
+                We find the patterns
+              </h3>
               <p className="text-sm text-gray leading-relaxed">
-                Records are structured, normalized, and cross-referenced. Budgets are
-                compared across towns and districts. Spending anomalies are flagged.
-                Connections between campaign donors and public contracts are surfaced.
+                Records are structured, normalized, and cross-referenced. Budgets
+                are compared across towns and districts. Spending anomalies are
+                flagged. Connections between campaign donors and public contracts
+                are surfaced.
+              </p>
+              <p className="text-xs text-gray-light mt-2 italic">
+                Example: donor/contract matches, spending anomalies, district
+                comparisons
               </p>
             </div>
             <div>
-              <p className="font-serif text-5xl font-black text-red/20 mb-4">III.</p>
-              <h3 className="font-semibold text-ink mb-2">You get the analysis</h3>
+              <p className="font-serif text-5xl font-black text-red/20 mb-4">
+                III.
+              </p>
+              <h3 className="font-semibold text-ink mb-2">
+                You get the analysis
+              </h3>
               <p className="text-sm text-gray leading-relaxed">
                 Evidence Briefs with sourced findings and policy recommendations.
                 Explainers that make complex systems understandable. A{" "}
                 <Link href="/ask" className="text-red underline">
                   civic assistant
                 </Link>{" "}
-                where you can ask questions about local government in plain language.
-                A daily podcast. A weekly newsletter.
+                where you can ask questions about local government in plain
+                language. A daily podcast. A weekly newsletter.
+              </p>
+              <p className="text-xs text-gray-light mt-2 italic">
+                Example: Evidence Briefs, explainers, civic assistant answers
               </p>
             </div>
           </div>

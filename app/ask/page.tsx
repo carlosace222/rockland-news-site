@@ -46,12 +46,28 @@ export default function AskPage() {
         </div>
       </div>
 
-      {/* Disclaimer */}
-      <div className="max-w-4xl mx-auto px-4 pb-10 text-center">
-        <p className="text-sm text-gray leading-relaxed max-w-xl mx-auto">
-          It is a tool, not an authority. For anything that matters, verify
-          against the source documents — which it will try to point you to.
-        </p>
+      {/* Scope & disclaimer */}
+      <div className="max-w-4xl mx-auto px-4 pb-10">
+        <div className="max-w-2xl mx-auto border border-rule p-5 text-sm text-gray leading-relaxed space-y-3">
+          <p className="font-medium text-ink">What this tool does well</p>
+          <p>
+            Questions about budgets, per-pupil spending, legislative votes,
+            campaign finance filings, meeting agendas, and zoning records
+            across Rockland County. It will try to cite specific source
+            documents.
+          </p>
+          <p className="font-medium text-ink">What to know</p>
+          <p>
+            The assistant draws from the rockland.news database, which is
+            updated on a regular collection cycle but is not real-time. It
+            covers fiscal years 2021&ndash;2026. Not all historical records
+            have been digitized. For anything that matters, verify against the
+            source documents &mdash; which it will try to point you to.
+          </p>
+          <p className="text-xs text-gray-light italic">
+            It is a tool, not an authority.
+          </p>
+        </div>
       </div>
     </div>
   );
