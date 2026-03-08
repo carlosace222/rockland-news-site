@@ -4,7 +4,7 @@ const topics = [
   {
     title: "Follow the Money",
     href: "/budget",
-    description: "Budgets, spending, and where tax dollars go",
+    description: "Budgets, contracts, tax levies, and spending patterns across every level of Rockland County government.",
     icon: (
       <svg
         className="w-10 h-10"
@@ -24,7 +24,7 @@ const topics = [
   {
     title: "Accountability Tracker",
     href: "/accountability",
-    description: "Legislative votes, meeting records, and policy patterns",
+    description: "Legislative votes, campaign finance, meeting records, and the connections between decisions and the people who make them.",
     icon: (
       <svg
         className="w-10 h-10"
@@ -45,7 +45,7 @@ const topics = [
   {
     title: "Explainers",
     href: "/explainers",
-    description: "How local government actually works",
+    description: "How local government actually works \u2014 budgets, zoning, FOIL, tax assessments \u2014 explained without jargon.",
     icon: (
       <svg
         className="w-10 h-10"

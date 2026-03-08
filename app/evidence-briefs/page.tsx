@@ -69,9 +69,18 @@ export default function EvidenceBriefs() {
         </span>
         <h1 className="font-serif text-4xl font-bold mt-2 mb-4">Evidence Briefs</h1>
         <p className="text-lg text-gray leading-relaxed max-w-2xl">
-          Our flagship format. Each Evidence Brief takes a single policy question, examines what
-          the data shows, and lays out the tradeoffs. Every number is sourced. Every comparison
-          is documented.
+          Structured analysis of specific policy questions affecting Rockland
+          County. Each brief is built on sourced data, peer comparisons, and
+          explicit tradeoffs.
+        </p>
+        <p className="text-base text-gray leading-relaxed max-w-2xl mt-3">
+          Every recommendation includes a confidence level and a clear statement
+          of what evidence would change the conclusion.
+        </p>
+        <p className="text-sm text-gray-light leading-relaxed max-w-2xl mt-3">
+          These are not opinion pieces. They are analytical documents designed to
+          help residents, officials, journalists, and advocates make
+          better-informed decisions.
         </p>
       </div>
 

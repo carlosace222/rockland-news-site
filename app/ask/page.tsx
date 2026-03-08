@@ -15,18 +15,26 @@ export default function AskPage() {
           rockland.news
         </span>
         <h1 className="font-serif text-3xl md:text-4xl font-bold text-ink mt-2 mb-3">
-          Ask About Rockland County
+          Ask about Rockland County government
         </h1>
         <p className="text-base text-gray leading-relaxed max-w-2xl mx-auto">
-          Ask any question about Rockland County government — budgets, school
-          spending, school districts, meeting records, property taxes, or how to
-          file a FOIL request. Powered by 50,000+ public records.
+          The civic assistant draws from the same database that powers
+          rockland.news — over 47,000 financial records, 8,200 campaign finance
+          entries, and meeting documents from every town and the county
+          legislature.
+        </p>
+        <p className="text-sm text-gray leading-relaxed max-w-2xl mx-auto mt-3">
+          Ask it about budgets, spending, school districts, legislative votes,
+          zoning decisions, or how local government processes work.
         </p>
       </div>
 
       {/* Chatbot iframe */}
       <div className="flex-1 w-full max-w-4xl mx-auto px-4 pb-8">
-        <div className="border border-rule rounded-sm overflow-hidden h-full" style={{ minHeight: "500px" }}>
+        <div
+          className="border border-rule rounded-sm overflow-hidden h-full"
+          style={{ minHeight: "500px" }}
+        >
           <iframe
             src="https://www.chatbase.co/chatbot-iframe/YcpPEoUDSRWvgvyQ6gOyR"
             title="rockland.news civic assistant"
@@ -40,15 +48,9 @@ export default function AskPage() {
 
       {/* Disclaimer */}
       <div className="max-w-4xl mx-auto px-4 pb-10 text-center">
-        <p className="text-xs text-gray-light italic leading-relaxed max-w-xl mx-auto">
-          This assistant uses AI to answer questions from public records in the
-          rockland.news database. It may occasionally make mistakes. Always
-          verify important information with official government sources. For the
-          latest analysis, read our{" "}
-          <a href="/evidence-briefs" className="text-red hover:underline">
-            Evidence Briefs
-          </a>
-          .
+        <p className="text-sm text-gray leading-relaxed max-w-xl mx-auto">
+          It is a tool, not an authority. For anything that matters, verify
+          against the source documents — which it will try to point you to.
         </p>
       </div>
     </div>

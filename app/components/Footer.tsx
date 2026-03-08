@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="md:col-span-1">
             <h3 className="font-serif text-xl font-bold text-ink mb-2">rockland.news</h3>
             <p className="text-sm text-gray leading-relaxed">
-              Data-driven civic transparency for Rockland County, NY. Every claim sourced. Every number traceable.
+              Civic intelligence for Rockland County. Every claim sourced. Every number traceable.
             </p>
           </div>
 
@@ -44,8 +44,8 @@ export default function Footer() {
               About
             </h4>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/about" className="text-ink hover:text-red transition-colors">Our Mission</Link></li>
-              <li><Link href="/methodology" className="text-ink hover:text-red transition-colors">Methodology</Link></li>
+              <li><Link href="/about" className="text-ink hover:text-red transition-colors">About</Link></li>
+              <li><Link href="/methodology" className="text-ink hover:text-red transition-colors">How It Works</Link></li>
               <li><Link href="/contact" className="text-ink hover:text-red transition-colors">Contact &amp; Tips</Link></li>
               <li><Link href="/ask" className="text-ink hover:text-red transition-colors">Ask a Question</Link></li>
             </ul>
@@ -54,7 +54,7 @@ export default function Footer() {
 
         <div className="border-t border-rule mt-8 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-gray">
-            &copy; {new Date().getFullYear()} rockland.news — Built by{" "}
+            &copy; {new Date().getFullYear()} rockland.news — Created by Carlos Acevedo, founder of{" "}
             <a href="https://currentcreative.ai" className="text-red hover:text-red-dark transition-colors">
               Current Creative
             </a>

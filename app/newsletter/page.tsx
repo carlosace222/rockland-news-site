@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Newsletter",
   description:
-    "Weekly Evidence Briefs, budget breakdowns, and civic analysis for Rockland County. Free.",
+    "Weekly Evidence Briefs, budget breakdowns, and civic updates for Rockland County. Free.",
 };
 
 export default function Newsletter() {
@@ -11,11 +12,19 @@ export default function Newsletter() {
     <div className="max-w-2xl mx-auto px-4 py-12">
       <div className="text-center mb-12">
         <h1 className="font-serif text-4xl font-bold mb-4">
-          The rockland.news Newsletter
+          The rockland.news newsletter
         </h1>
         <p className="text-lg text-gray leading-relaxed">
-          Evidence Briefs, budget breakdowns, and civic analysis — delivered
-          to your inbox weekly. Free. No spam. No partisan spin.
+          A weekly briefing on what&apos;s happening in Rockland County
+          government — and what it means.
+        </p>
+        <p className="text-base text-gray leading-relaxed mt-4">
+          Each issue includes the week&apos;s most significant findings, new
+          records added to the database, one upcoming meeting worth attending,
+          and links to the latest Evidence Briefs and explainers.
+        </p>
+        <p className="text-sm text-gray-light mt-4 italic">
+          Free. No spam. No partisan framing.
         </p>
       </div>
 
@@ -38,24 +47,15 @@ export default function Newsletter() {
         />
       </div>
 
-      <div className="max-w-lg mx-auto">
-        <h2 className="font-serif text-xl font-bold mb-4 text-center">
-          What you&apos;ll get
-        </h2>
-        <ul className="space-y-3 text-sm text-gray">
-          <li className="flex gap-3">
-            <span className="text-ink font-bold">Weekly</span>
-            <span>Evidence Briefs and civic analysis</span>
-          </li>
-          <li className="flex gap-3">
-            <span className="text-ink font-bold">Monthly</span>
-            <span>State of the County data report</span>
-          </li>
-          <li className="flex gap-3">
-            <span className="text-ink font-bold">As needed</span>
-            <span>Breaking budget decisions and civic alerts</span>
-          </li>
-        </ul>
+      <div className="text-center">
+        <p className="text-sm text-gray">
+          Want to go deeper? Evidence Briefs, budget breakdowns, and the full
+          database are available at{" "}
+          <Link href="/" className="text-red hover:underline">
+            rockland.news
+          </Link>
+          .
+        </p>
       </div>
     </div>
   );

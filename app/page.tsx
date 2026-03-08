@@ -19,12 +19,11 @@ export default function Home() {
         </h1>
         <p className="text-lg md:text-xl text-gray leading-relaxed mb-5 max-w-2xl mx-auto">
           330,000 residents. A $900 million county budget. Five towns. Eight school districts.
-          One question: <em className="font-serif">where is the money going?</em>
+          Budgets, contracts, votes, and zoning decisions spread across dozens of government
+          websites in dozens of formats.
         </p>
         <p className="text-base text-gray-light mb-10 max-w-xl mx-auto leading-relaxed">
-          We read the budgets, analyze the spending, and track the policy decisions —
-          so you don&apos;t have to read 47-page PDFs to know what&apos;s happening
-          with your government.
+          We collect it, organize it, cross-reference it, and explain what it means.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
@@ -112,29 +111,33 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-12">
             <div>
               <p className="font-serif text-5xl font-black text-red/20 mb-4">I.</p>
-              <h3 className="font-semibold text-ink mb-2">We collect the data</h3>
+              <h3 className="font-semibold text-ink mb-2">We collect the records</h3>
               <p className="text-sm text-gray leading-relaxed">
-                Automated scrapers pull budgets, agendas, school reports, and
-                public records from 15+ government sources every week.
+                Software and automated workflows pull budgets, agendas, meeting minutes,
+                school reports, campaign finance filings, and other public records from
+                government sources across Rockland County.
               </p>
             </div>
             <div>
               <p className="font-serif text-5xl font-black text-red/20 mb-4">II.</p>
-              <h3 className="font-semibold text-ink mb-2">We analyze the patterns</h3>
+              <h3 className="font-semibold text-ink mb-2">We find the patterns</h3>
               <p className="text-sm text-gray leading-relaxed">
-                Compare budgets across towns and districts. Flag anomalies.
-                Track spending trends. Connect the dots no single document shows.
+                Records are structured, normalized, and cross-referenced. Budgets are
+                compared across towns and districts. Spending anomalies are flagged.
+                Connections between campaign donors and public contracts are surfaced.
               </p>
             </div>
             <div>
               <p className="font-serif text-5xl font-black text-red/20 mb-4">III.</p>
-              <h3 className="font-semibold text-ink mb-2">You get the story</h3>
+              <h3 className="font-semibold text-ink mb-2">You get the analysis</h3>
               <p className="text-sm text-gray leading-relaxed">
-                Evidence Briefs, daily podcast, explainers, and a{" "}
+                Evidence Briefs with sourced findings and policy recommendations.
+                Explainers that make complex systems understandable. A{" "}
                 <Link href="/ask" className="text-red underline">
                   civic assistant
                 </Link>{" "}
-                where you can ask any question about local government.
+                where you can ask questions about local government in plain language.
+                A daily podcast. A weekly newsletter.
               </p>
             </div>
           </div>
@@ -145,7 +148,7 @@ export default function Home() {
       <section className="border-t border-rule py-16">
         <div className="max-w-2xl mx-auto px-4 text-center">
           <h2 className="font-serif text-3xl font-bold text-ink mb-4">
-            Stay informed. Stay engaged.
+            Stay informed.
           </h2>
           <p className="text-gray mb-8">
             Weekly Evidence Briefs, budget breakdowns, and civic updates
